@@ -1,90 +1,76 @@
+
 <!DOCTYPE html>
-<html lang="th">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Mystic Daily</title>
-  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: 'Sarabun', sans-serif;
-      background: linear-gradient(to right, #111, #333);
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body, html {
+      height: 100%;
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      display: flex;
+      height: 100vh;
+      overflow: hidden;
+    }
+    .panel {
+      flex: 1;
+      position: relative;
+      transition: 0.5s;
+      background-size: cover;
+      background-position: center;
+      cursor: pointer;
+    }
+    .panel:hover {
+      flex: 2;
+    }
+    .overlay {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
       color: white;
-    }
-    header {
-      text-align: center;
-      padding: 80px 20px 40px;
-    }
-    header h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
-    }
-    header p {
-      font-size: 1.2rem;
-      color: #ccc;
-    }
-    nav {
-      text-align: center;
-      margin-top: 30px;
-    }
-    nav a {
-      display: inline-block;
-      margin: 0 15px;
-      color: #00ffff;
-      text-decoration: none;
+      font-size: 2em;
       font-weight: bold;
-      padding: 10px 20px;
-      border: 2px solid #00ffff;
-      border-radius: 30px;
-      transition: all 0.3s ease;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
     }
-    nav a:hover {
-      background-color: #00ffff;
-      color: #111;
-    }
-    .section {
-      text-align: center;
-      padding: 60px 20px;
-    }
-    .section h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-    }
-    .section p {
-      max-width: 600px;
-      margin: auto;
-      color: #ccc;
-      font-size: 1.1rem;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #000;
-      color: #aaa;
+    .panel a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      color: white;
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Mystic Daily</h1>
-    <p>เว็บไซต์รวบรวมเรื่องเล่าลี้ลับ สัตว์ประหลาด และตำนานจากทั่วทุกมุมโลก</p>
-  </header>
-
-  <nav>
-    <a href="#">หน้าแรก</a>
-    <a href="#">สัตว์ประหลาด</a>
-    <a href="#">เรื่องลึกลับ</a>
-    <a href="#">ช่อง YouTube</a>
-  </nav>
-
-  <div class="section">
-    <h2>ยินดีต้อนรับ</h2>
-    <p>เรารวบรวมข้อมูลน่าสนใจเกี่ยวกับสิ่งมีชีวิตลึกลับ ความเชื่อลี้ลับ ตำนานท้องถิ่น และเรื่องราวเหนือธรรมชาติไว้ที่นี่ แล้วนำไปสร้างเป็นวิดีโอเล่าเรื่องในช่อง YouTube ของเรา</p>
+  <div class="container">
+    <div class="panel" style="background-image: url('creature.jpg');">
+      <a href="creatures.html">
+        <div class="overlay">สัตว์ประหลาด</div>
+      </a>
+    </div>
+    <div class="panel" style="background-image: url('mystery.jpg');">
+      <a href="mysteries.html">
+        <div class="overlay">เรื่องลึกลับ</div>
+      </a>
+    </div>
+    <div class="panel" style="background-image: url('legend.jpg');">
+      <a href="legends.html">
+        <div class="overlay">ตำนาน</div>
+      </a>
+    </div>
+    <div class="panel" style="background-image: url('belief.jpg');">
+      <a href="beliefs.html">
+        <div class="overlay">ความเชื่อ</div>
+      </a>
+    </div>
   </div>
-
-  <footer>
-    © 2025 Mystic Daily | เรื่องลึกลับมีอยู่ทุกวัน
-  </footer>
 </body>
 </html>
